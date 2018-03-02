@@ -21,7 +21,7 @@ https://developer.apple.com/library/content/samplecode/CustomTransitions/CustomV
 class CustomPresentationController: UIPresentationController {
 	
 	private var interactor 			= Interactor()
-	private var defaultBlurRadius 	= CGFloat(2) // * UIScreen.main.scale // radius for blur
+	private var defaultBlurRadius 	= CGFloat(2) 
 	private var defaultAlpha	 	= CGFloat(0.25)
 	
 	private lazy var dimmingView: UIView? = {
