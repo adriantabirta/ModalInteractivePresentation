@@ -14,6 +14,13 @@
 		33258A2420496A7800B89D9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33258A2220496A7800B89D9B /* LaunchScreen.storyboard */; };
 		33258A2F20496A7800B89D9B /* ModalInteractivePresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A2E20496A7800B89D9B /* ModalInteractivePresentationTests.swift */; };
 		33258A3A20496A7800B89D9B /* ModalInteractivePresentationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A3920496A7800B89D9B /* ModalInteractivePresentationUITests.swift */; };
+		33258A4920496CE900B89D9B /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A4820496CE900B89D9B /* DismissAnimator.swift */; };
+		33258A4B20496D0000B89D9B /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A4A20496D0000B89D9B /* PresentAnimator.swift */; };
+		33258A4D20496D1500B89D9B /* CustomPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A4C20496D1500B89D9B /* CustomPresentationController.swift */; };
+		33258A4F20496D2100B89D9B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A4E20496D2100B89D9B /* Interactor.swift */; };
+		33258A5120496D3400B89D9B /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A5020496D3400B89D9B /* VisualEffectView.swift */; };
+		33258A5320496DC300B89D9B /* BulletinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33258A5220496DC300B89D9B /* BulletinViewController.swift */; };
+		33258A5520496DFF00B89D9B /* flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33258A5420496DFF00B89D9B /* flower.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		33258A3520496A7800B89D9B /* ModalInteractivePresentationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModalInteractivePresentationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33258A3920496A7800B89D9B /* ModalInteractivePresentationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalInteractivePresentationUITests.swift; sourceTree = "<group>"; };
 		33258A3B20496A7800B89D9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33258A4820496CE900B89D9B /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		33258A4A20496D0000B89D9B /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
+		33258A4C20496D1500B89D9B /* CustomPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationController.swift; sourceTree = "<group>"; };
+		33258A4E20496D2100B89D9B /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		33258A5020496D3400B89D9B /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		33258A5220496DC300B89D9B /* BulletinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinViewController.swift; sourceTree = "<group>"; };
+		33258A5420496DFF00B89D9B /* flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +111,12 @@
 		33258A1820496A7800B89D9B /* ModalInteractivePresentation */ = {
 			isa = PBXGroup;
 			children = (
+				33258A5420496DFF00B89D9B /* flower.jpg */,
 				33258A1920496A7800B89D9B /* AppDelegate.swift */,
 				33258A1B20496A7800B89D9B /* ViewController.swift */,
+				33258A5220496DC300B89D9B /* BulletinViewController.swift */,
 				33258A1D20496A7800B89D9B /* Main.storyboard */,
+				33258A4720496CDD00B89D9B /* PresentationFiles */,
 				33258A2020496A7800B89D9B /* Assets.xcassets */,
 				33258A2220496A7800B89D9B /* LaunchScreen.storyboard */,
 				33258A2520496A7800B89D9B /* Info.plist */,
@@ -123,6 +140,18 @@
 				33258A3B20496A7800B89D9B /* Info.plist */,
 			);
 			path = ModalInteractivePresentationUITests;
+			sourceTree = "<group>";
+		};
+		33258A4720496CDD00B89D9B /* PresentationFiles */ = {
+			isa = PBXGroup;
+			children = (
+				33258A4E20496D2100B89D9B /* Interactor.swift */,
+				33258A4820496CE900B89D9B /* DismissAnimator.swift */,
+				33258A4A20496D0000B89D9B /* PresentAnimator.swift */,
+				33258A5020496D3400B89D9B /* VisualEffectView.swift */,
+				33258A4C20496D1500B89D9B /* CustomPresentationController.swift */,
+			);
+			path = PresentationFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33258A5520496DFF00B89D9B /* flower.jpg in Resources */,
 				33258A2420496A7800B89D9B /* LaunchScreen.storyboard in Resources */,
 				33258A2120496A7800B89D9B /* Assets.xcassets in Resources */,
 				33258A1F20496A7800B89D9B /* Main.storyboard in Resources */,
@@ -259,7 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33258A4F20496D2100B89D9B /* Interactor.swift in Sources */,
+				33258A4B20496D0000B89D9B /* PresentAnimator.swift in Sources */,
+				33258A5120496D3400B89D9B /* VisualEffectView.swift in Sources */,
 				33258A1C20496A7800B89D9B /* ViewController.swift in Sources */,
+				33258A4920496CE900B89D9B /* DismissAnimator.swift in Sources */,
+				33258A5320496DC300B89D9B /* BulletinViewController.swift in Sources */,
+				33258A4D20496D1500B89D9B /* CustomPresentationController.swift in Sources */,
 				33258A1A20496A7800B89D9B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

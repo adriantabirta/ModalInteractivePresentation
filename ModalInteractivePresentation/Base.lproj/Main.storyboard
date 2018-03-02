@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEC-SO-5lT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Bulletin View Controller-->
+        <scene sceneID="Dzo-37-3gZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="BulletinViewController" id="Mwt-li-lmN" customClass="BulletinViewController" customModule="InteractiveModal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fvd-8G-yTw"/>
+                        <viewControllerLayoutGuide type="bottom" id="e08-3D-wJO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTz-i5-GJh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="502"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AH-0v-Btc">
+                                <rect key="frame" x="15" y="15" width="345" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nu9-iG-UAa">
+                                <rect key="frame" x="15" y="437" width="345" height="50"/>
+                                <color key="backgroundColor" red="0.15459728240000001" green="0.4499074817" blue="0.75373083350000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rcx-4x-8xl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="close:" destination="Mwt-li-lmN" eventType="touchUpInside" id="6U2-Tv-O0H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give me a star if you like this project. (Github)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nS-qk-CR9">
+                                <rect key="frame" x="63" y="190.5" width="250" height="122"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Nu9-iG-UAa" firstAttribute="leading" secondItem="qTz-i5-GJh" secondAttribute="leading" constant="15" id="19T-EW-68n"/>
+                            <constraint firstItem="1nS-qk-CR9" firstAttribute="centerX" secondItem="qTz-i5-GJh" secondAttribute="centerX" id="91T-eP-qOe"/>
+                            <constraint firstItem="1nS-qk-CR9" firstAttribute="width" secondItem="qTz-i5-GJh" secondAttribute="width" multiplier="2:3" id="9KL-kS-Fd4"/>
+                            <constraint firstItem="1AH-0v-Btc" firstAttribute="leading" secondItem="qTz-i5-GJh" secondAttribute="leading" constant="15" id="DBL-Dx-3v8"/>
+                            <constraint firstItem="e08-3D-wJO" firstAttribute="top" secondItem="Nu9-iG-UAa" secondAttribute="bottom" constant="15" id="QGK-jd-8Dp"/>
+                            <constraint firstAttribute="trailing" secondItem="Nu9-iG-UAa" secondAttribute="trailing" constant="15" id="ZDS-uZ-gzy"/>
+                            <constraint firstAttribute="trailing" secondItem="1AH-0v-Btc" secondAttribute="trailing" constant="15" id="kgD-x0-rKx"/>
+                            <constraint firstItem="1nS-qk-CR9" firstAttribute="centerY" secondItem="qTz-i5-GJh" secondAttribute="centerY" id="nyJ-3e-y6c"/>
+                            <constraint firstItem="1AH-0v-Btc" firstAttribute="top" secondItem="qTz-i5-GJh" secondAttribute="top" constant="15" id="xjK-ul-nBc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z59-7D-qd2"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lNe-AN-1NZ" appends="YES" id="9ga-QG-R1X"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="502"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="het-Bb-o63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lNe-AN-1NZ">
+                    <connections>
+                        <action selector="handleGesture:" destination="Mwt-li-lmN" id="PG4-NO-L6f"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="730" y="77"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lRy-Ae-5WB">
+            <objects>
+                <viewController id="eEC-SO-5lT" customClass="ViewController" customModule="InteractiveModal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hS0-Of-tjA"/>
+                        <viewControllerLayoutGuide type="bottom" id="01f-KB-fdU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aOX-vp-gHl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flower.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-cX-tCd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXc-Tn-CRm">
+                                <rect key="frame" x="127" y="115.5" width="121" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="Open Modal">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="presentAction" destination="eEC-SO-5lT" eventType="touchUpInside" id="0wD-Hf-xDO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="lXc-Tn-CRm" firstAttribute="centerX" secondItem="aOX-vp-gHl" secondAttribute="centerX" id="2TV-68-9CA"/>
+                            <constraint firstItem="zLb-cX-tCd" firstAttribute="leading" secondItem="aOX-vp-gHl" secondAttribute="leading" id="dwb-j3-lj7"/>
+                            <constraint firstItem="01f-KB-fdU" firstAttribute="top" secondItem="zLb-cX-tCd" secondAttribute="bottom" id="hfo-Dr-HF1"/>
+                            <constraint firstItem="lXc-Tn-CRm" firstAttribute="centerY" secondItem="aOX-vp-gHl" secondAttribute="centerY" constant="-200" id="jqZ-o8-O3K"/>
+                            <constraint firstItem="zLb-cX-tCd" firstAttribute="top" secondItem="aOX-vp-gHl" secondAttribute="top" id="vc5-jK-2oZ"/>
+                            <constraint firstAttribute="trailing" secondItem="zLb-cX-tCd" secondAttribute="trailing" id="zy8-IB-Tah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4M-Aw-sYE"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22a-sF-rVw" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="55" y="152"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flower.jpg" width="1000" height="667"/>
+    </resources>
 </document>
